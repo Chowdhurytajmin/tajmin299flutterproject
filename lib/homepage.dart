@@ -1,92 +1,142 @@
+import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart'; 
- 
-class Homepage extends StatelessWidget { 
-  const Homepage({super.key}); 
- 
-  @override 
-  Widget build(BuildContext context) { 
-      return  
-       Scaffold( 
-        appBar: AppBar(title:Text("HomePage"),//appbar er jonno 
-        centerTitle: true, 
-        backgroundColor: const Color.fromARGB(255, 59, 138, 148),
-        foregroundColor:Colors.white ,//appbar er colors cng hobe 
-        //leading: Icon(Icons.home),//home sign ashbe size color cng kora barite 
-        actions: [ 
-          IconButton(onPressed:(){} , icon: Icon(Icons.search)), 
-          IconButton(onPressed:(){} , icon: Icon(Icons.person)), 
- 
-        ],//multiple widget use kora jay icon buttons 
- 
-        ), 
-        drawer: Drawer( 
-          child: Column(children: [UserAccountsDrawerHeader 
-          (accountName: Text("Name"),  
-          accountEmail: Text("Email"), 
-          decoration: BoxDecoration(color:const Color.fromARGB(255, 92, 107, 192),)), 
-           
-           
-          ListTile(title: Text("Homepage"), 
-          leading: Icon(Icons.home), 
-          hoverColor: const Color.fromARGB(255, 197, 202, 233) 
-          ,onTap: (){}), 
-          Divider(), 
-          Spacer(), 
-            
-          ListTile(title: Text("Profile"), 
-          leading: Icon(Icons.person), 
-          hoverColor: const Color.fromARGB(255, 187, 192, 230) 
-          ,onTap: (){}), 
-          ], 
-          ), 
-        ),//aita dile leading cmnt kore rakhbo 
- 
-        body:Padding( 
-          padding: const EdgeInsets.all(10), 
-          child: Row( 
-           // mainAxisAlignment: MainAxisAlignment.end, onno side chole jay 
-            mainAxisAlignment: MainAxisAlignment.center, 
-            crossAxisAlignment: CrossAxisAlignment.start, 
-            //mainAxisAlignment: MainAxisAlignment.spaceAround, 
-            children: [ 
-              TextButton(onPressed: (){},  
-              style: TextButton.styleFrom( 
-                backgroundColor: const Color.fromARGB(255, 144, 164, 255), 
-                foregroundColor: const Color.fromARGB(255, 30, 79, 100), 
-                fixedSize: Size(100, 20), 
-                side: BorderSide() 
-                //elevation:10, 
-                ), 
-               
-               child: Text("TextButton"),), 
-               SizedBox(width: 10,), 
-           
-              ElevatedButton(onPressed: (){},  
-              style: ElevatedButton.styleFrom( 
-                backgroundColor: const Color.fromARGB(255, 121, 180, 203), 
-                foregroundColor: const Color.fromARGB(255, 255, 255, 255), 
-                fixedSize: Size(150, 20), 
-                side: BorderSide() 
-           
-              ), 
-               
-              child:Text("ElevatedButton") ), 
-           
-              OutlinedButton(onPressed: (){}, child: Text("OutlineButton")), 
-              IconButton(onPressed: (){}, icon:Icon(Icons.login)) 
-            ], 
-          ), 
-        ), 
-     floatingActionButton: FloatingActionButton(onPressed: (){},  
-     tooltip: "Add", 
-     foregroundColor:const Color.fromARGB(255, 255, 255, 255) , 
-     shape: BeveledRectangleBorder(), 
-     backgroundColor:const Color.fromARGB(255, 49, 104, 105) , 
-     child: Icon(Icons.add),), 
-     ); 
-   
-  } 
- 
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 254, 254, 254),
+      appBar: AppBar(
+        title: Text("HomePage"),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 33, 20, 181),
+        foregroundColor: Color.fromARGB(255, 254, 254, 254),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.person)),
+        ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text("Name"),
+              accountEmail: Text("Email"),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 14, 14, 179),
+              ),
+            ),
+
+            ListTile(
+              title: Text("Homepage"),
+              leading: Icon(Icons.home, color: Color.fromRGBO(37, 99, 235, 1)),
+              hoverColor: const Color.fromRGBO(239, 246, 255, 1),
+              onTap: () {},
+            ),
+            Divider(),
+            Spacer(),
+
+            ListTile(
+              title: Text("Profile"),
+              leading: Icon(
+                Icons.person,
+                color: Color.fromRGBO(37, 99, 235, 1),
+              ),
+              hoverColor: const Color.fromRGBO(239, 246, 255, 1),
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              // mainAxisAlignment: MainAxisAlignment.end, onno side chole jay
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: const Color.fromRGBO(239, 246, 255, 1),
+                    foregroundColor: const Color.fromRGBO(37, 99, 235, 1),
+                    fixedSize: Size(120, 45),
+                    side: const BorderSide(
+                      color: Color.fromRGBO(37, 99, 235, 1),
+                    ),
+                    //elevation:10,
+                  ),
+
+                  child: Text("TextButton"),
+                ),
+                SizedBox(width: 10),
+
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromRGBO(37, 99, 235, 1),
+                    foregroundColor: const Color.fromRGBO(239, 246, 255, 1),
+                    fixedSize: Size(150, 45),
+                    side: BorderSide(),
+                  ),
+
+                  child: Text("ElevatedButton"),
+                ),
+                const SizedBox(width: 10),
+
+                OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: const Color(0xFF2563EB),
+                    side: const BorderSide(color: Color(0xFF2563EB)),
+                    fixedSize: const Size(130, 45),
+                  ),
+                  child: const Text("Outlined"),
+                ),
+
+                const SizedBox(width: 10),
+              ],
+            ),
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(100),
+            alignment: Alignment.bottomRight,
+            decoration: BoxDecoration(
+              color: const Color.fromRGBO(37, 99, 235, 1),
+              border: Border.all(
+                width: 5,
+                color: const Color.fromRGBO(37, 99, 235, 1),
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              //shape: BoxShape.circle,
+              gradient: RadialGradient(
+                colors: [
+                  Colors.deepPurpleAccent,
+                  const Color.fromRGBO(37, 99, 235, 1),
+                ],
+              ),
+            ),
+            child: Text("its body"),
+          ),
+        ],
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: "Add",
+        foregroundColor: const Color.fromARGB(255, 225, 229, 238),
+        shape: BeveledRectangleBorder(),
+        backgroundColor: Color.fromRGBO(37, 99, 235, 1),
+        child: Icon(Icons.add),
+      ),
+    );
+  }
 }
-
