@@ -50,83 +50,98 @@ class Homepage extends StatelessWidget {
         ),
       ),
 
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Row(
-              // mainAxisAlignment: MainAxisAlignment.end, onno side chole jay
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              //mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color.fromRGBO(239, 246, 255, 1),
-                    foregroundColor: const Color.fromRGBO(37, 99, 235, 1),
-                    fixedSize: Size(120, 45),
-                    side: const BorderSide(
-                      color: Color.fromRGBO(37, 99, 235, 1),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.end, onno side chole jay
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(239, 246, 255, 1),
+                      foregroundColor: const Color.fromRGBO(37, 99, 235, 1),
+                      fixedSize: Size(120, 45),
+                      side: const BorderSide(
+                        color: Color.fromRGBO(37, 99, 235, 1),
+                      ),
+                      //elevation:10,
                     ),
-                    //elevation:10,
+
+                    child: Text("TextButton"),
+                  ),
+                  SizedBox(width: 10),
+
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(37, 99, 235, 1),
+                      foregroundColor: const Color.fromRGBO(239, 246, 255, 1),
+                      fixedSize: Size(150, 45),
+                      side: BorderSide(),
+                    ),
+
+                    child: Text("ElevatedButton"),
+                  ),
+                  const SizedBox(width: 10),
+
+                  OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: const Color(0xFF2563EB),
+                      side: const BorderSide(color: Color(0xFF2563EB)),
+                      fixedSize: const Size(130, 45),
+                    ),
+                    child: const Text("Outlined"),
                   ),
 
-                  child: Text("TextButton"),
-                ),
-                SizedBox(width: 10),
-
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromRGBO(37, 99, 235, 1),
-                    foregroundColor: const Color.fromRGBO(239, 246, 255, 1),
-                    fixedSize: Size(150, 45),
-                    side: BorderSide(),
-                  ),
-
-                  child: Text("ElevatedButton"),
-                ),
-                const SizedBox(width: 10),
-
-                OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: const Color(0xFF2563EB),
-                    side: const BorderSide(color: Color(0xFF2563EB)),
-                    fixedSize: const Size(130, 45),
-                  ),
-                  child: const Text("Outlined"),
-                ),
-
-                const SizedBox(width: 10),
-              ],
-            ),
-          ),
-          Container(
-            height: 200,
-            width: 200,
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(100),
-            alignment: Alignment.bottomRight,
-            decoration: BoxDecoration(
-              color: const Color.fromRGBO(37, 99, 235, 1),
-              border: Border.all(
-                width: 5,
-                color: const Color.fromRGBO(37, 99, 235, 1),
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              //shape: BoxShape.circle,
-              gradient: RadialGradient(
-                colors: [
-                  Colors.deepPurpleAccent,
-                  const Color.fromRGBO(37, 99, 235, 1),
+                  const SizedBox(width: 10),
                 ],
               ),
             ),
-            child: Text("its body"),
-          ),
-        ],
+            Container(
+              height: 200,
+              width: 200,
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(100),
+              alignment: Alignment.bottomRight,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(37, 99, 235, 1),
+                border: Border.all(
+                  width: 5,
+                  color: const Color.fromRGBO(37, 99, 235, 1),
+                ),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                //shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    Colors.deepPurpleAccent,
+                    const Color.fromRGBO(37, 99, 235, 1),
+                  ],
+                ),
+              ),
+              child: Text("its body"),
+            ),
+            SizedBox(
+              height: 200,
+              width: 200,
+              child: Card(
+                margin: EdgeInsets.all(5),
+                color: const Color.fromARGB(255, 82, 34, 255),
+                shadowColor: Colors.deepPurpleAccent,
+                elevation: 20,
+                shape: BeveledRectangleBorder(),
+                child: Text("Hello card"),
+              ),
+            ),
+            Image.asset('assets/images/aa.jpg'),
+          ],
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(

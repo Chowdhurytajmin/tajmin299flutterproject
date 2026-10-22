@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tajminchy29964g/homepage.dart';
+import 'package:tajminchy29964g/calculator.dart';
 
 void main(){
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget{
   return MaterialApp( 
     theme: ThemeData.light(),
     debugShowCheckedModeBanner: false,
-    home:Homepage());//full app a cng korle aikhane korbo
+    home: CalculatorPage(),);//full app a cng korle aikhane korbo
 
   }
 
